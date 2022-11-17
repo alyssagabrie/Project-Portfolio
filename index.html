@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags always come first -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
+<!-- Additional CSS  must be placed after Bootstrap CSS-->
+ <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+ <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+ <script src="https://kit.fontawesome.com/c6c67c2143.js" crossorigin="anonymous"></script>
+
+
+
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+     rel="stylesheet">
+
+ <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="home">
+<a class="skip-to-content" href="#main">Skip to content</a>
+<header class="primary-header flex">
+  <div>
+    <img src="./imgs/vortex light.png icon.png" alt="space tourism logo" class="logo">
+  </div>
+  <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+  <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+          <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>About</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Skills</a>
+          <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Projects</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Resume</a>
+      </ul>
+  </nav>
+</header>
+
+  <div class="grid-container grid-container--home">
+    <div>
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">Alyssa's Project Portfolio 
+      <span class="d-block fs-800 ff-serif clr-primary">Web Developer</span></h1>
+      
+      <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience! </p>
+    </div>
+    <div>
+      <img src="./imgs/vortex light-medium.png"space tourism logo" class="large-button"></img>
+    </div>
+  </div>
+
+  <!-- Section One -->
+
+<!--  About   -->
+<div id="about">
+  <div class="container">
+    <div class="row row-content">
+      <div class="about-col-1">
+        <img src="imgs/astronaut chillin-about.jpg">
+      </div>
+      <div class="about-col-2">
+      <h1>About Me </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc turpis turpis, mattis vel magna sed, lacinia pretium tortor. Duis quam nisl, posuere id arcu eget, molestie gravida nulla. Nullam posuere, massa et efficitur mollis, eros felis mattis odio, vitae porta purus orci id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      </p>
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+      </div>
+      <div class="tab-contents active-tab" id="skills">
+        <ul>
+          <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+          <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+          <li><span>App Development</span><br>Designing Web/App interfaces</li>
+        </ul>
+      </div>
+      <div class="tab-contents" id="experience">
+        <ul>
+          <li><span>month/year</span><br>Occupation and Company</li>
+          <li><span>month/year</span><br>Occupation and Company</li>
+          <li><span>month/year</span><br>Occupation and Company</li>
+        </ul>
+      </div>
+      <div class="tab-contents" id="education">
+        <ul>
+          <li><span>Web Design Professional </span><br>Broward College</li>
+          <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+        
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Section two -->
+<!-- Services -->
+<div class="project-body">
+<div class="container">
+  <h1 class ="title text-center py-4">Services</h1>
+  <div class="row">
+    <div class="col-lg-4 d-flex justify-content-center">
+      <div class="card m-2 cb1 text-center">
+        <div class="card-body">
+          <span class="card-number fw-bold">01</span>
+          <h2 class="card-title mb-4">Web Design</h2>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-outline-light my-5">Reach out</a>
+        </div>
+      </div>
+    </div>
+ <!-- the other card 2 -->
+ <div class="col-lg-4 d-flex justify-content-center">
+  <div class="card m-2 cb2 text-center">
+    <div class="card-body">
+      <span class="card-number fw-bold">02</span>
+      <h2 class="card-title mb-4">Web Development</h2>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-outline-light my-5">Reach out</a>
+    </div>
+  </div>
+</div>
+   <!-- the other card 3 -->
+ <div class="col-lg-4 d-flex justify-content-center">
+  <div class="card m-2 cb1 text-center">
+    <div class="card-body">
+      <span class="card-number fw-bold">03</span>
+      <h2 class="card-title mb-4">Graphic Design</h2>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-outline-light my-5">Reach out</a>
+    </div>
+  </div>
+
+
+</div>
+</div>
+</div>
+
+<!-- Projects -->
+<div class="portfolio">
+  <div class="container">
+    <h1>My Work </h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="imgs/project 1 .png">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#"><i class="fa-solid fa-rocket"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="imgs/project 2.png">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#"><i class="fa-solid fa-rocket"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="imgs/project 3.png">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#"><i class="fa-solid fa-rocket"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+  </div>
+</div>
+
+<!-- End of Projects -->
+
+<!-- Contact Section  -->
+<div class="contact-section flex">
+<section id="contact" class="full-height px-lg-5">
+  <div class="container">
+    <div class="row justify-content-center text-center pb-4" data-aos="fade-up">
+      <div class="col-log-8">
+        <h1 class=" fs-800 text-brand p-3">CONTACT</h1>
+        <h4>Interested in working together? Let's talk</h4>
+        <br><br>
+      </div> 
+       <div class="col-lg-8">
+        <form action ="#" class="row g-lg-3 gy-3">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="form-group col-md-12">
+            <input type="text" class="form-control" placeholder="Enter subject">
+          </div>
+          <div class="form-group col-12">
+            <textarea name ="" rows="4" class="form-control" placeholder="Message Me!" ></textarea>
+          </div>
+          <div class="form-group col-12">
+            <button type="submit" class="btn-contact">Send Message</button>
+          </div>
+        </form>
+       </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<!-- End of Contact  -->
+<!-- Footer -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+
+
+
+
+<!-- end of Footer -->
+
+   <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+      <!-- build:js js/main.js -->
+      
+      <script src="nav.js"></script>
+  
+        <!-- endbuild -->
+    
+    
+    
+
+</body>
+</html>
