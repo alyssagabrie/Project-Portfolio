@@ -3,29 +3,56 @@
 /* ------------------- */
 
 :root {
- 
-    color: white; 
-    background-color: black;
-    margin: auto;
-
-  
+    /* colors */
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%; 
+    --clr-pink: #ed6fde;
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1.75rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
 }
 
 @media (min-width: 35em) {
     :root {
-        color: white;
-       font-size: 18px;
-     
+        --fs-800: 6rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
     }
 }
 
 @media (min-width: 45em) {
     :root {
-        color: white;
-        font-size: 18px;
+        /* font-sizes */
+        --fs-800: 5.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
     }
 }
 
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Box sizing */
 *,
@@ -57,30 +84,28 @@ p {
     font-weight: 400;
 }
 /* h1 */
-h1 { background:#ffffff;background-color: #ffffff;background-image: radial-gradient(circle farthest-corner at center, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent; 
-   font-size: 50px; 
-   font-family:Georgia, 'Times New Roman', Times, serif;
+h1 {  background:#ffffff;background-color: #ffffff;background-image: linear-gradient(0deg, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent;
+   font-size: 3.5rem;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
-
-/* h2 */
-h2 { background:#ffffff;background-color: #ffffff;background-image: radial-gradient(circle farthest-corner at center, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent; 
-  font-size: 45px;  
-  font-family:Georgia, 'Times New Roman', Times, serif;
+h2 {  background:#ffffff;background-color: #ffffff;background-image: linear-gradient(0deg, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent;
+    font-size: 3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
-
-h3 {
- background:#ffffff;background-color: #ffffff;background-image: radial-gradient(circle farthest-corner at center, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent; 
-  font-size: 35px;  
-  font-family:Georgia, 'Times New Roman', Times, serif;
-
-} 
+h3 { 
+    color: white;
+    font-size: 2rem;
+}
 
 /* set up the body */
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: white;
-    background-color:black;
+    background-color: black;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
     line-height: 1.5;
     min-height: 100vh;
     display: grid;
@@ -182,6 +207,20 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) ); 
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
 
 /* About Section */
 
@@ -210,33 +249,9 @@ select {
     border-radius: 10px;
 }
 
-.accordion-button { border:1px solid;border-image: radial-gradient(circle farthest-corner at center, rgba(203, 163, 178, 1) 20%, rgba(231, 190, 205, 1) 40%, rgba(255, 218, 234, 1) 60%, rgba(255, 247, 255, 1) 80%, rgba(255, 255, 255, 1) 100%) 10% round; }
-
-/* Service Section */
-
-.services {
-    background-color:black;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height:auto;
-}
-/* Project Section */
-
-.portfolio {
-    background-color: #171717;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height:auto;
-}
-
 /* Contact Me Section */
 .contact-section {
-    background-color: black;
-    backdrop-filter: blur(1rem);
-   
-    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.1);
+
     margin: auto; 
     padding: 3% 4%;
  }
@@ -272,7 +287,7 @@ select {
     border-radius: 1rem;
     border: 1px solid transparent; 
 
-    backdrop-filter: blur(3rem);
+    backdrop-filter: blur(1rem);
     box-shadow: 1.3rem 1.3rem 1.3rem rgba(0,0,0, 0.5);
 
     border-top-color: rgba(225, 225, 225, 0.5);
@@ -291,7 +306,7 @@ select {
 }
 
 .card-number {
-    color: rgba(104, 103, 103, 0.3); 
+    color: rgba(225, 225, 225, 0.3); 
     font-size: 8rem; 
     z-index: -1; 
     position: absolute;
@@ -303,7 +318,7 @@ select {
 .btn-contact {
     background-color:black ;
     border-radius: 5px;
-    border-color:#ed6fde;
+    border-color:var(--clr-pink);
     color: whitesmoke;
     width: 50%;
     padding: 10px 5px;
@@ -328,9 +343,41 @@ select {
 
 /* colors */
 
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
 
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
 
+/* typography */
 
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
 
 .numbered-title {
     font-family: var(--ff-sans-cond);
@@ -342,7 +389,7 @@ select {
 .numbered-title span {
     margin-right: .5em;
     font-weight: 700;
-    color: hsl( var(--clr-white) / .25);
+    color: 
 }
 
 
@@ -350,23 +397,42 @@ select {
 /* Compontents         */
 /* ------------------- */
 
-.navbar-brand{
-    color:rgba(203, 163, 178, 1);
+
+
+
+/* primary-header */
+
+
+
+
+
+/* .primary-header {
+    justify-content: space-between;
+    align-items: center;
 }
-.nav-link {
-    color: white;
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl( var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
 }
 
-.nav-link:hover {
-    color:rgba(203, 163, 178, 1);
-    }
-
-.navbar-toggler {
-    color:rgba(255, 218, 234, 1);
+.primary-navigation a {
+    text-decoration: none;
 }
 
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
 
-
+.mobile-nav-toggle {
+    display: none;
+} */
 
 
 
@@ -383,25 +449,22 @@ body {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
- 
 }
-/* 
+
 @media (min-width: 35rem) {
     .home {
-    
+        background-position: center center;
     }
 }
 
 @media (min-width: 45rem) {
     .home {
-        
-        
     }
-}   */
+}  
 
 
 .footer {
-   background-color: #ed6fde;
+    background-color: #171717;
     backdrop-filter: blur(1rem);
     box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
     color: whitesmoke;
@@ -483,9 +546,14 @@ body {
 .active-tab.active-tab {
     display:block;
 }
- 
+
+/* Project Section */
+
 .portfolio {
-     padding: 50px 0px;
+    background-color: #171717; 
+    padding: 50px 0px;
+
+    
 
 }
 
@@ -494,6 +562,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+
 }
 
 .work {
@@ -507,6 +576,7 @@ body {
     border-radius: 20px;
     display:block ;
     transition: transform 0.5s;
+
 }
 
 .layer {
@@ -572,9 +642,28 @@ background-color: #ed6fde;
 border:none;
 }
 
+/* Footer  */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
 
- 
+  .b-example-divider {
+    height: 1px;
+    background-color: #3d3d3d;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
 
   
 
