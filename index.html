@@ -24,28 +24,25 @@
 
  <title>Alyssa Herrera | Project Portfolio</title>
 </head>
-<body>
-<header>
-<div>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon btn-outline-light"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a  class="nav-link active link-secondary" aria-current="page" href="#">Home</a>
-          <a  class="nav-link" href="#about">About</a>
-          <a  class="nav-link" href="#services">Services</a>
-          <a  class="nav-link" href="#portfolio">Portfolio</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </div>
-      </div>
+<body class="home">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header">
+    <div>
     </div>
-  </nav>
-</div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li class="active"><a class="text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+            <li><a class="text-white letter-spacing-2" href="#about"><span aria-hidden="true">01</span>About</a>
+            <li><a class=" text-white letter-spacing-2" href="#services"><span aria-hidden="true">02</span>Services</a>
+            <li><a class=" text-white letter-spacing-2" href="#portfolio"><span aria-hidden="true">03</span>Projects</a>
+            <li><a class=" text-white letter-spacing-2" href="#contact"><span aria-hidden="true">03</span>Contact Me</a>
+
+        </ul>
+    </nav>
+  </header>
+
+
 <!-- End of Navbar -->
 </header>
   <div class="grid-container grid-container--home">
@@ -59,6 +56,7 @@
       <img src="./imgs/vortex light-medium.png"></img>
     </div>
   </div>
+
 
   <!-- Section One -->
 
@@ -162,7 +160,7 @@
         </div>
       </div>
       <div class="work">
-        <img src="imgs/project 2.png">
+        <img src="imgs/project2.png">
         <div class="layer">
           <h3>Project 2</h3>
           <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
